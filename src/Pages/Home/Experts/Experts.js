@@ -9,25 +9,28 @@ import expert6 from '../../../images/experts/expert-6.png'
 import Expert from '../Expert/Expert';
 
 const experts = [
-    {id: 1, name: 'Will Smith', img: expert1},
-    {id: 2, name: 'Chris Rook', img: expert2},
-    {id: 3, name: 'Dwayne Rook', img: expert3},
-    {id: 4, name: 'Messy Vai', img: expert4},
-    {id: 5, name: 'Ronaldo Bro', img: expert5},
-    {id: 6, name: 'Stachy Jhonson', img: expert6},
+    { id: 1, name: 'Will Smith', img: expert1 },
+    { id: 2, name: 'Chris Rook', img: expert2 },
+    { id: 3, name: 'Dwayne Rook', img: expert3 },
+    { id: 4, name: 'Messy Vai', img: expert4 },
+    { id: 5, name: 'Ronaldo Bro', img: expert5 },
+    { id: 6, name: 'Stachy Jhonson', img: expert6 },
 ]
 
 const Experts = () => {
     return (
-        <div className=" container mt-5">
-            <h2 className='text-primary text-center'>Our Experts</h2>
-            <div className="row">
-            {
-                experts.map(expert => <Expert
-                key={expert.id}
-                expert={expert}
-                ></Expert>)
-            }
+        <div className=" d-sm-flex .justify-content-sm-center
+        container mt-5">
+            <div id='experts'>
+                <h2 className='text-primary text-center'>Our Experts</h2>
+                <div className="row">
+                    {
+                        experts.map(expert => <Expert
+                            key={expert.id}
+                            expert={expert}
+                        ></Expert>)
+                    }
+                </div>
             </div>
         </div>
     );
